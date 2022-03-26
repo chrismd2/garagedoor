@@ -4,7 +4,7 @@ Start in ```iex -S mix``` to test
   * Most actions require a valid access_code to be executed
     - default access_code after ```Garagedoor.Door.init``` is 19999
 
-Testing use-cases after running ```Garagedoor.Door.init```
+Testing use-cases
   1. View current door state, and how long its been in that state, and who set the state
     - ```Garagedoor.state```
       > {"open", 6, "init"}
