@@ -26,7 +26,9 @@ defmodule Garagedoor.Application do
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: Garagedoor.Supervisor]
-    Supervisor.start_link(children, opts)
+    r = Supervisor.start_link(children, opts)
+    Garagedoor.Door.init
+    r
   end
 
   # Tell Phoenix to update the endpoint configuration
